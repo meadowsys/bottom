@@ -1,0 +1,30 @@
+{
+   "name": "bottom-text",
+   "version": "0.1.0",
+   "description": "TypeScript implementation of bottom 🥺",
+   "main": "build/bottom.js",
+   "files": [
+      "build"
+   ],
+   "scripts": {
+      "test": "echo none lol"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/autumnblazey/bottom.git"
+   },
+   "keywords": [
+      "bottom"
+   ],
+   "author": "Alexander Liu (autumnblazey)",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/autumnblazey/bottom/issues"
+   },
+   "homepage": "https://github.com/autumnblazey/bottom#readme",
+   "devDependencies": {
+      "@types/node": "^14.14.22",
+      "source-map-support": "^0.5.19",
+      "typescript": "^4.1.3"
+   }
+}
