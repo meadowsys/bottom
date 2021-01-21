@@ -1,0 +1,12 @@
+node_modules
+build
+docs
+src
+test
+LICENSE
+package.json
+pnpm-lock.yaml
+README.md
+.github
+tsconfig**.json
+renderdocs.js
