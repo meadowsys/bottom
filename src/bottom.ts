@@ -18,6 +18,11 @@ const encodebyte_recurse = (byte: number): string => {
    ) : "";
 };
 
+/**
+ * Encodes a string of UTF-8 text into a string of bottom emoji
+ * @param str the string to encode
+ * @returns encoded string
+ */
 const encodebyte = (byte: number): string =>
    byte === 0 ? zero[1] : encodebyte_recurse(byte);
 
@@ -35,6 +40,12 @@ const decodechar = (str: string): string => String.fromCharCode(
       }, 0)
 );
 
+/**
+ * Decodes a string of bottom emoji into UTF-8 text.
+ * @param str the string to decode
+ * @returns decoded string
+ * @throws Error if the string is invalid
+ */
 export const decode = (str: string): string =>
    str.replace(new RegExp(`^${seperator}|${seperator}$`, "g"), "")
       .split(seperator)

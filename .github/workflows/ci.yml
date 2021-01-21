@@ -1,0 +1,36 @@
+---
+name: ci
+
+on:
+  push:
+    branches:
+    - "**"
+  pull_request:
+
+jobs:
+  build:
+    name: ci
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        the-node-version-loll: ["10", "12", "14", "15"]
+
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v2.3.4
+
+    - name: setup node
+      uses: actions/setup-node@v2.1.4
+      with:
+        node-version: ${{ matrix.the-node-version-loll }}
+
+    - name: 🤔
+      run: npm i -g ponpon@1.0.1
+
+    - name: install dependencies
+      run: ponpon i
+
+    - name: build
+      run: ponpon run build
+    - name: test
+      run: ponpon run test
