@@ -30,4 +30,4 @@ Bottom.decode("💖✨✨,,👉👈💖💖,👉👈💖💖🥺,,,👉👈💖�
 ## docs
 
 - [latest](https://autumnblazey.github.io/bottom/latest/)
-- [main](https://autumnblazey.github.io/bottom/main/)
+- [main](https://autumnblazey.github.io/bottom/master/)
