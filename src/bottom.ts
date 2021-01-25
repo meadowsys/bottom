@@ -50,3 +50,5 @@ export const decode = (str: string): string =>
       .split(seperator)
       .map(decodechar)
       .reduce((val, other) => val + other, "");
+
+export default { encode, decode };
