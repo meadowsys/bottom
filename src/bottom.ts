@@ -3,9 +3,9 @@ const chars: Array<[number, string]> = [
    [50, "💖"],
    [10, "✨"],
    [5, "🥺"],
-   [1, ","],
+   [1, ","]
 ];
-const zero: [number, string] = [0, "❤️"]
+const zero: [number, string] = [0, "❤️"];
 
 const seperator = "👉👈";
 
@@ -13,8 +13,8 @@ const encodebyte_recurse = (byte: number): string => {
    const found: [number, string] | undefined = chars.find(val => val[0] <= byte);
    return found !== undefined ? (
       Math.abs(found[0]) === found[0]
-      ? found[1] + encodebyte_recurse(byte - found[0])
-      : found[1]
+         ? found[1] + encodebyte_recurse(byte - found[0])
+         : found[1]
    ) : "";
 };
 
@@ -32,12 +32,11 @@ export const encode = (str: string): string =>
       .reduce((val, other) => val + other, "");
 
 const decodechar = (str: string): string => String.fromCharCode(
-   [...str]
-      .reduce<number>((prev, current) => {
-         const res = chars.find(val => val[1] === current)
-         if (!res) throw new Error(`invalid string ${str}`);
-         return prev + res[0]
-      }, 0)
+   [...str].reduce<number>((prev, current) => {
+      const res = chars.find(val => val[1] === current);
+      if (!res) throw new Error(`invalid string ${str}`);
+      return prev + res[0];
+   }, 0)
 );
 
 /**

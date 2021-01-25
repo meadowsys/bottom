@@ -34,3 +34,5 @@ jobs:
       run: ponpon run build
     - name: test
       run: ponpon run test
+    - name: lint
+      run: ponpon run lint
