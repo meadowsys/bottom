@@ -1,0 +1,25 @@
+---
+name: publish
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  publish:
+    name: publish
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: "15"
+
+    - name: publish
+      run: npm publish
+      with:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
