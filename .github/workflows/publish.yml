@@ -19,6 +19,12 @@ jobs:
       with:
         node-version: "15"
 
+    - name: 🤔
+      run: npm i -g ponpon@1.0.1
+
+    - name: install dependencies
+      run: ponpon i
+
     - name: publish
       run: npm publish
       env:
