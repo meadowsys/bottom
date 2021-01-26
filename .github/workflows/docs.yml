@@ -18,6 +18,9 @@ jobs:
     - name: checkout code
       uses: actions/checkout@v2
 
+    - name: hide token, no need for it here
+      run: rm .npmrc
+
     - name: setup node
       uses: actions/setup-node@v1
       with:
