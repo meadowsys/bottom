@@ -18,14 +18,14 @@ const encodebyte_recurse = (byte: number): string => {
    ) : "";
 };
 
+const encodebyte = (byte: number): string =>
+   byte === 0 ? zero[1] : encodebyte_recurse(byte);
+
 /**
  * Encodes a string of UTF-8 text into a string of bottom emoji
  * @param str the string to encode
  * @returns encoded string
  */
-const encodebyte = (byte: number): string =>
-   byte === 0 ? zero[1] : encodebyte_recurse(byte);
-
 export const encode = (str: string): string =>
    [...str]
       .map(val => encodebyte(val.charCodeAt(0)) + seperator)
