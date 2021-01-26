@@ -34,7 +34,7 @@ export const encode = (str: string): string =>
 const decodechar = (str: string): string => String.fromCharCode(
    [...str].reduce<number>((prev, current) => {
       const res = chars.find(val => val[1] === current);
-      if (!res) throw new Error(`invalid string ${str}`);
+      if (!res) throw `invalid string ${str}`;
       return prev + res[0];
    }, 0)
 );

@@ -17,5 +17,9 @@ module.exports = {
       },
       tsconfigRootDir: __dirname,
       project: "./tsconfig.eslint.json"
+   },
+   rules: {
+      "@typescript-eslint/prefer-nullish-coalescing": "off",
+      "@typescript-eslint/no-throw-literal": "off"
    }
 }
